@@ -3,7 +3,6 @@
 {% block content %}
   <h1>Driver list</h1>
 
-  {% if driver_list %}
     <table>
       <thead>
         <tr>
@@ -27,10 +26,8 @@
             <td>{{ driver.license_number }}</td>
           </tr>
         {% endfor %}
-      {% else %}
-        <p>No drivers.</p>
       {% endif %}
       </tbody>
     </table>
-  {% endif %}
+  {% include "includes/pagination.html" %}
 {% endblock %}
